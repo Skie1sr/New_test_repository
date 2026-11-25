@@ -13,3 +13,5 @@ if modo == "Celsius a Fahrenheit":
 else:
     resultado = (valor - 32) * 5 / 9
     st.write(f"{valor} °F son {round(resultado, 2)} °C")
+
+    ##11111
