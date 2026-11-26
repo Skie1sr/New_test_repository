@@ -1,13 +1,20 @@
-import streamlit as st 
-
+import streamlit as st
 
 st.title("Conversor de temperatura")
-celsius = st.number_input("Grados celsius")
-farenheit = celsius * 9 / 5 + 32
-st.write(f"{celsius} *C son {farenheit} *f")
 
-print("Hola mundo")
-#Comntario para segundo commit#
+modo = st.radio(
+    "Convertir de:", ["Celsius a Fahrenheit", "Fahrenheit a Celsius"]
+)
+valor = st.number_input("Valor")
+
+if modo == "Celsius a Fahrenheit":
+    resultado = valor * 9 / 5 + 32
+    st.write(f"{valor} °C son {round(resultado, 2)} °F")
+else:
+    resultado = (valor - 32) * 5 / 9
+    st.write(f"{valor} °F son {round(resultado, 2)} °C")
 
 
-2222222222
+    ##11111
+222222222
+222222222
